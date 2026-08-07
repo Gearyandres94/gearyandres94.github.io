@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('normalize.css');
+
+/* reset css */
+* {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  list-style-type: none;
+}
+
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+}
+
+button {
+  background: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* styles */
+
+
+:root {
+  --main-violet: #11071F;
+  --secondary-violet: #1A0B2E;
+  --text-color: #ffffff;
+  --text-accent: #7127BA;
+}
+
+body {
+  background-color: var(--main-violet);
+  color: #ffffff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.violet {
+  color: var(--text-accent);
+}

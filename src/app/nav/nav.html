@@ -1,11 +1,24 @@
 <header>
-  <a routerLin="">
-    <img src="" alt="">
+  <a routerLink='/'>
+    <img src="./assets/logo-nav.png" alt="">
   </a>
-  <nav routerLink='/'>
-    <a>Home</a>
-    <a>About</a>
-    <a>Lab</a>
+  <div class="toogle">
+    <label for="lang-eng">
+      EN
+      <input type="radio" id="lang-eng" value="english" name="language">
+    </label>
+    <label for="lang-Es">
+      ES
+      <input type="radio" id="lang-eng" name="language" value="español">
+    </label>
+  </div>
+  <nav>
+    <a routerLink="/" fragment="home" [routerLinkActiveOptions]="{ fragment: 'exact' }"
+      routerLinkActive="active">Home</a>
+    <a routerLink=" /about" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
+      fragment="about">About</a>
+    <a routerLink="/lab" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
+      fragment="lab">Lab</a>
   </nav>
 
 </header>
