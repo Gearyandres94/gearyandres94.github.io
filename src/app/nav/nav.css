@@ -1,0 +1,65 @@
+header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  padding: 0 0 0 20%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-violet);
+}
+
+nav {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  padding-right: 5rem;
+  font-weight: 500;
+
+  a {
+    transition: color .4s ease-in-out;
+  }
+
+  a:hover,
+  a.active {
+    color: var(--text-accent)
+  }
+
+}
+
+.toogle {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 400px;
+  border: 2px solid var(--text-accent);
+  position: relative;
+}
+
+.fill-bkg {
+  background-color: var(--text-accent);
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 400px;
+  top: 0;
+  pointer-events: none;
+  left: 0;
+  transition: all ease-in-out .4s;
+
+
+  &.right {
+    transform: translateX(70%);
+  }
+}
+
+.toogle input {
+  visibility: hidden;
+  width: 0;
+}
+
+label {
+  cursor: pointer;
+}

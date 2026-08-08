@@ -12,6 +12,7 @@
 a,
 a:visited {
   text-decoration: none;
+  color: #ffffff;
 }
 
 h1,
@@ -30,6 +31,10 @@ img {
 
 /* styles */
 
+@font-face {
+  font-family: 'preah';
+  src: url('./assets/fonts/Preahvihear-Regular.ttf');
+}
 
 :root {
   --main-violet: #11071F;
@@ -41,6 +46,7 @@ img {
 body {
   background-color: var(--main-violet);
   color: #ffffff;
+  font-family: 'preah';
 }
 
 .sr-only {
@@ -52,6 +58,11 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.main-cont {
+  max-width: 1400px;
+  margin: 0 0 0 20%;
 }
 
 .violet {

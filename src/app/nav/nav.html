@@ -3,22 +3,22 @@
     <img src="./assets/logo-nav.png" alt="">
   </a>
   <div class="toogle">
+    <div class="fill-bkg" [class.right]="lang.value=='español'"></div>
     <label for="lang-eng">
       EN
-      <input type="radio" id="lang-eng" value="english" name="language">
+      <input [formControl]="lang" type="radio" id="lang-eng" value="english" name="language">
     </label>
-    <label for="lang-Es">
+    <label for="lang-es">
       ES
-      <input type="radio" id="lang-eng" name="language" value="español">
+      <input type="radio" [formControl]="lang" id="lang-es" value="español" name="language">
     </label>
   </div>
   <nav>
     <a routerLink="/" fragment="home" [routerLinkActiveOptions]="{ fragment: 'exact' }"
       routerLinkActive="active">Home</a>
-    <a routerLink=" /about" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
+    <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
       fragment="about">About</a>
-    <a routerLink="/lab" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
-      fragment="lab">Lab</a>
+    <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active" fragment="lab">Lab</a>
   </nav>
 
 </header>
