@@ -41,6 +41,7 @@ img {
   --secondary-violet: #1A0B2E;
   --text-color: #ffffff;
   --text-accent: #7127BA;
+  --text-green: #22B573;
 }
 
 body {
@@ -61,10 +62,25 @@ body {
 }
 
 .main-cont {
-  max-width: 1400px;
-  margin: 0 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .violet {
   color: var(--text-accent);
+}
+
+.green {
+  color: var(--text-green);
+}
+
+.mx-width {
+  max-width: 80rem;
+  width: 100%;
+}
+
+main {
+  padding-top: 10rem;
 }

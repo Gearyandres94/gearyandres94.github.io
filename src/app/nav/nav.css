@@ -1,12 +1,19 @@
 header {
   width: 100%;
-  display: flex;
+  background-color: var(--secondary-violet);
   position: fixed;
   top: 0;
-  padding: 0 0 0 20%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.nav-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
   justify-content: space-between;
-  background-color: var(--secondary-violet);
 }
 
 nav {
