@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, signal, viewChild } from '@angular/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 import { concat, from, interval, of, Subscription } from 'rxjs';
 import { concatMap, delay, ignoreElements, map, repeat, take } from 'rxjs/operators';
 @Component({
   selector: 'app-home-hero',
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './home-hero.html',
   styleUrl: './home-hero.css',
 })

@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { Nav } from './nav/nav';
 import { Footer } from './footer/footer';
 import { TranslateService, TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import translationEN from "../assets/i18n/en.json";
+import translationES from "../assets/i18n/es.json";
 
 
 @Component({
@@ -15,7 +17,9 @@ export class App {
   private translate = inject(TranslateService)
   protected readonly title = signal('portfolio');
   constructor() {
-    this.translate.addLangs(['es', 'en'])
+    this.translate.setTranslation('en', translationEN);
+    this.translate.setTranslation('es', translationES);
+
   }
 
 

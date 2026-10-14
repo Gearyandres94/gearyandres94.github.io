@@ -4,25 +4,30 @@
     <a routerLink='/'>
       <img src="./assets/logo-nav.png" alt="">
     </a>
-    <div class="toogle">
-      <div class="fill-bkg" [class.right]="lang.value=='español'"></div>
-      <label for="lang-eng">
-        EN
-        <input [formControl]="lang" type="radio" id="lang-eng" value="english" name="language">
-      </label>
-      <label for="lang-es">
-        ES
-        <input type="radio" [formControl]="lang" id="lang-es" value="español" name="language">
-      </label>
+    <div class="cont">
+
+      <div class="toogle">
+        <div class="fill-bkg" [class.right]="lang.value=='español'"></div>
+        <label for="lang-eng">
+          EN
+          <input [formControl]="lang" type="radio" id="lang-eng" value="english" name="language"
+            (input)="changeLanguage('en')">
+        </label>
+        <label for="lang-es">
+          ES
+          <input type="radio" [formControl]="lang" id="lang-es" value="español" name="language"
+            (input)="changeLanguage('es')">
+        </label>
+      </div>
+      <nav>
+        <a routerLink="/" fragment="home" [routerLinkActiveOptions]="{ fragment: 'exact' }"
+          routerLinkActive="active">Home</a>
+        <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
+          fragment="about">About</a>
+        <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
+          fragment="lab">Lab</a>
+      </nav>
     </div>
-    <nav>
-      <a routerLink="/" fragment="home" [routerLinkActiveOptions]="{ fragment: 'exact' }"
-        routerLinkActive="active">Home</a>
-      <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
-        fragment="about">About</a>
-      <a routerLink="/" [routerLinkActiveOptions]="{ fragment: 'exact' }" routerLinkActive="active"
-        fragment="lab">Lab</a>
-    </nav>
 
   </div>
 </header>
